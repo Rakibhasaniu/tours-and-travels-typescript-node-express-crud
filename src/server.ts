@@ -21,6 +21,19 @@ async function server() {
   }
   
 }
+  try{
+    await mongoose.connect('mongodb://localhost:27017/travel');
+    console.log('mong')
+
+  app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+  })
+
+  } catch(error){
+    console.log(error)
+  }
+  
+}
 
 
 
